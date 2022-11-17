@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {IssuesService} from "./issues.service";
+import {Issue} from "./issue";
 
 @Component({
   selector: 'sandbox-issue-list',
@@ -6,7 +8,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./issue-list.component.scss'],
 })
 export class IssueListComponent implements OnInit {
-  constructor() {}
 
-  ngOnInit(): void {}
+  issues: Issue[] = [];
+  showReportIssue = false;
+  selectedIssue: Issue | null = null;
+
+  constructor(private issueService: IssuesService) {
+  }
+
+  ngOnInit(): void {
+    this.getIssues();
+  }
+
+  onCloseReport() {
+    this.showReportIssue = false;
+    this.getIssues();
+  }
+
+  private getIssues() {
+    this.issues = this.issueService.getPendingIssues();
+  }
+
+  onConfirm(confirmed: boolean) {
+    if (confirmed && this.selectedIssue) {
+      this.issueService.completeIssue(this.selectedIssue);
+      this.getIssues();
+    }
+    this.selectedIssue = null;
+  }
 }
