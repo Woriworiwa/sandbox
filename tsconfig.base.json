@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@sandbox/issue-tracker": ["libs/issue-tracker/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
