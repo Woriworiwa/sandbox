@@ -6,3 +6,6 @@ export interface Issue {
   type: 'Feature' | 'Bug' | 'Documentation';
   completed?: Date;
 }
+
+
+// add this to styles "node_modules/@clr/ui/clr-ui.min.css",
