@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@sandbox/gh-portfolio": ["libs/gh-portfolio/src/index.ts"],
-      "@sandbox/issue-tracker": ["libs/issue-tracker/src/index.ts"]
+      "@sandbox/issue-tracker": ["libs/issue-tracker/src/index.ts"],
+      "@sandbox/pro9-advanced": ["libs/pro9-advanced/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
