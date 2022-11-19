@@ -16,7 +16,11 @@
         "tsConfig": "apps/launcher/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": ["apps/launcher/src/favicon.ico", "apps/launcher/src/assets"],
-        "styles": ["apps/launcher/src/styles.scss","node_modules/@clr/ui/clr-ui.min.css"],
+        "styles": [
+          "apps/launcher/src/styles.scss",
+          "node_modules/bootstrap/dist/css/bootstrap.min.css",
+          "node_modules/bootstrap-icons/font/bootstrap-icons.scss"
+        ],
         "scripts": []
       },
       "configurations": {

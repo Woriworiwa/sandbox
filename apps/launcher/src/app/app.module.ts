@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import {RouterModule} from "@angular/router";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -15,8 +16,11 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule,
+    HttpClientModule,
     RouterModule.forRoot([
-      { path: 'issue-tracker', loadChildren: () => import('@sandbox/issue-tracker').then(m => m.IssueTrackerModule) },{ path: '', pathMatch: 'full', redirectTo: 'issue-tracker' }
+      { path: 'portfolio', loadChildren: () => import('@sandbox/gh-portfolio').then(m => m.GhPortfolioModule) },
+      { path: 'issue-tracker', loadChildren: () => import('@sandbox/issue-tracker').then(m => m.IssueTrackerModule) },
+      { path: '', pathMatch: 'full', redirectTo: 'portfolio' }
     ])],
   providers: [],
   bootstrap: [AppComponent],

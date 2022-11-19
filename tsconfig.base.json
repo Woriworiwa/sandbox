@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@sandbox/gh-portfolio": ["libs/gh-portfolio/src/index.ts"],
       "@sandbox/issue-tracker": ["libs/issue-tracker/src/index.ts"]
     }
   },
