@@ -25,14 +25,14 @@ export class Model {
       product.id = this.generateID();
       this.products.push(product);
     } else {
-      let index = this.products
+      const index = this.products
         .findIndex(p => this.locator(p, product.id));
       this.products.splice(index, 1, product);
     }
   }
 
   deleteProduct(id: number) {
-    let index = this.products.findIndex(p => this.locator(p, id));
+    const index = this.products.findIndex(p => this.locator(p, id));
     if (index > -1) {
       this.products.splice(index, 1);
     }
