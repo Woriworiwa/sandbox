@@ -19,8 +19,9 @@ import {HttpClientModule} from "@angular/common/http";
     HttpClientModule,
     RouterModule.forRoot([
       { path: 'portfolio', loadChildren: () => import('@sandbox/gh-portfolio').then(m => m.GhPortfolioModule) },
+      { path: 'pro9-advanced', loadChildren: () => import('@sandbox/pro9-advanced').then(m => m.Pro9AdvancedModule) },
       { path: 'issue-tracker', loadChildren: () => import('@sandbox/issue-tracker').then(m => m.IssueTrackerModule) },
-      { path: '', pathMatch: 'full', redirectTo: 'portfolio' }
+      { path: '', pathMatch: 'full', redirectTo: 'pro9-advanced' }
     ])],
   providers: [],
   bootstrap: [AppComponent],
