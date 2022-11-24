@@ -1,7 +1,9 @@
 import { Injectable } from "@angular/core";
 import { Product } from "./product.model";
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class StaticDataSource {
 
   private data: Product[];

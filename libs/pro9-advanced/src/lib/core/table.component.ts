@@ -9,8 +9,9 @@ import {SharedState, MODES} from './sharedState.model';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
+  private state: SharedState = new SharedState();
 
-  constructor(private model: Model, private state: SharedState) {
+  constructor(private model: Model) {
   }
 
   ngOnInit(): void {

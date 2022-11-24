@@ -2,7 +2,9 @@ import {Injectable} from "@angular/core";
 import {Product} from "./product.model";
 import {StaticDataSource} from "./static.datasource";
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class Model {
   private products: Product[];
   private locator = (p: Product, id?: number) => p.id == id;
